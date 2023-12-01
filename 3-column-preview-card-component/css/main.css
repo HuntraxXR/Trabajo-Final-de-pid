@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Big Shoulders Display', cursive;
+    src: url('fonts/Big_Shoulders_Display,Lexend_Deca/Big_Shoulders_Display/BigShouldersDisplay-VariableFont_wght.ttf');
+
+    font-family: 'Lexend Deca', sans-serif;
+    src: url('fonts/Big_Shoulders_Display,Lexend_Deca/Lexend_Deca/LexendDeca-VariableFont_wght.ttf');
+
+}   
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    --Transparent-white: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+    --Very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+
+    /*Font size: 15px*/
+}
+/********* Caracteristicas Globales***********************/
+body{
+    margin: 0;
+}
+
+h2{
+    font-family: 'Big Shoulders Display';
+    font-weight: 700; 
+    font-size: 30px;
+    color: var(--Very-light-gray);
+}
+
+p{
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--Transparent-white);
+    line-height: 24px;
+    word-spacing: 1px;
+    margin-bottom: 35px;
+    
+}
+
+button{
+    width: 160px;
+    height: 44px;
+    border-radius: 60px;
+    border-color: white;
+    border-style: none;
+    background-color: var(--Very-light-gray);
+    align-items: center;
+}
+
+button p{
+    margin: 0;
+}
+
+button:hover{
+    background-color: transparent;
+    border-style:double;
+    cursor:pointer;
+    color: white;
+}
+
+
+button p:hover{
+    color: white;
+}
+
+
+/***********************************************/
+.cards_main_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card_section{
+    width: 330px;
+    /*margin: 0 20px 0 20px;*/
+    margin: auto;
+}
+
+
+
+.orange_card{
+    margin-top: 50px;
+    border-radius: 10px 10px 0 0;
+    background-color: var(--Bright-orange);
+}
+.orange_card button p{
+    color: var(--Bright-orange);
+}
+
+
+.cyan_card{
+    background-color: var(--Dark-cyan);
+}
+.cyan_card button {
+    color: var(--Dark-cyan);
+}
+
+.dark_cyan_card{
+    margin-bottom: 50px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--Very-dark-cyan);
+}
+.dark_cyan_card button p{
+    color: var(--Very-dark-cyan);
+}
+
+.card_content{
+    margin: 50px;
+}
+
+@media (min-width: 1024px){
+
+    .cards_main_section{
+        flex-direction: row;
+        margin-top: 150px;
+    }
+
+    .card_section{
+        margin: 0;
+    }
+
+    .orange_card{
+        border-radius: 10px 0 0 10px;
+    }
+
+    .dark_cyan_card{
+        border-radius: 0 10px 10px 0;
+    }
+}
